@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: olivedrab;
+            margin: 100px auto;
+            /* animation: big 3s ease-in-out 1s 2 forwards alternate; */
+        }
+
+        @keyframes big{
+            0%{
+                width: 100px;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+        .box1{
+            animation-name: big;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+        }
+        input:checked + div{
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <div class="box box1"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-21-객체배열02</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script lang="java">
+        $(document).ready(function(){
+            // var bg = new Array("#ff0000", "#ff0ff", "#00ffff", "#00ff00")
+            var bg = new Array("url()", "#ff0ff", "#00ffff", "#00ff00")
+            var i=0
+            setInterval(function(){
+                
+                if(i==3){i=0}else{i++}
+
+                console.log(i)
+
+                var bgc= bg[i]
+                console.log(bgc)
+                $("body").animate({"background-color" : bg[i]},500)
+            },200)/* setInterval */
+
+
+        })/* jQuery Close */
+
+    </script>
+
+    <style type="text/css">
+        body{height: 100vh;}
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

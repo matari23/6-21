@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .job{
+            box-sizing: border-box;
+            width: 0px;
+            height: 60px;
+            /* border-radius: 100%; */
+            background-color: thistle;
+            margin: 10px 0;
+            transition: width 2s ease-in, height 1s 2s ease-out;
+            /* transition: all 2s ease-in 1s; */
+        }
+        input:checked ~ .jb1{
+            width: 500px;
+            height: 60px;
+            /* border-radius: 0; */
+            background-color: rgb(165, 238, 218);
+        }
+        input:checked ~ .jb2{
+            width: 300px;
+            height: 60px;
+            /* border-radius: 0; */
+            background-color: rgb(137, 125, 246);
+        }
+        /* div ~ h1{
+            color: green;
+        } */
+        .wrap{
+            /* border: 1px solid black; */
+            width: 500px;
+            height: 100px;
+        }
+        .wrap a{
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            height: 30px;
+            /* border: 1px solid green; */
+        }
+        .wrap span{
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: black;
+        }
+        .wrap:hover span{
+            width: 300px;
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <p>transition=property : all</p>
+    <div class="job jb1"></div>
+
+    <p>transition=property : width, color</p>
+    <div class="job jb2"></div>
+
+    <div class="wrap">
+        <a href="#">글씨글씨</a>
+        <span></span>
+    </div>
+</body>
+</html>
